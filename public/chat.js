@@ -16,7 +16,7 @@ class ChatBot {
         });
 
         // Message de bienvenue
-        this.appendMessage("Bonjour ! Je suis Osmo, votre assistant parfumé chez Osmoz. Que puis-je faire pour vous?");
+        this.appendMessage("Bonjour ! Je suis Osmo, votre assistant parfumé chez Osmoz. Que puis-je faire pour ?");
     }
 
     appendMessage(message, isUser = false) {
@@ -63,6 +63,12 @@ class ChatBot {
             if (this.conversationHistory.length > this.maxHistoryLength) {
                 this.conversationHistory = this.conversationHistory.slice(-this.maxHistoryLength);
             }
+
+            // Préparer le contexte du système
+            const systemMessage = {
+                role: 'system',
+                content: 'Tu es Eliza, un assistant IA amical et serviable. Tu es spécialisé dans l\'aide aux utilisateurs. Tu dois toujours répondre en français de manière claire et concise. Tu dois être poli et professionnel. Tu dois rester dans le cadre de tes compétences et ne pas faire de promesses que tu ne peux pas tenir.'
+            };
 
             // Créer le tableau complet des messages
             const messages = [
