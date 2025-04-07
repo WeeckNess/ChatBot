@@ -16,7 +16,7 @@ class ChatBot {
         });
 
         // Message de bienvenue
-        this.appendMessage("Bonjour ! Je suis Osmo, votre assistant parfumé chez Osmoz. Que puis-je faire pour ?");
+        this.appendMessage("Bonjour ! Je suis Osmo, votre assistant parfumé chez Osmoz. Je suis là pour vous aider à découvrir et comprendre le monde merveilleux des parfums. Comment puis-je vous aider aujourd'hui ?");
     }
 
     appendMessage(message, isUser = false) {
@@ -67,7 +67,7 @@ class ChatBot {
             // Préparer le contexte du système
             const systemMessage = {
                 role: 'system',
-                content: 'Tu es Eliza, un assistant IA amical et serviable. Tu es spécialisé dans l\'aide aux utilisateurs. Tu dois toujours répondre en français de manière claire et concise. Tu dois être poli et professionnel. Tu dois rester dans le cadre de tes compétences et ne pas faire de promesses que tu ne peux pas tenir.'
+                content: 'Tu es Osmo, l\'assistant parfumé d\'Osmoz. Tu es spécialisé dans le domaine des parfums et de la parfumerie. Tu dois toujours répondre en français de manière élégante et professionnelle. Tu dois être passionné par les parfums et capable de partager tes connaissances de manière accessible. Tu dois rester dans le cadre de tes compétences en parfumerie et ne pas faire de promesses que tu ne peux pas tenir.'
             };
 
             // Créer le tableau complet des messages
